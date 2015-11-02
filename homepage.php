@@ -4,6 +4,18 @@
 <body>
 <p>
     <?php
+    $_SESSION=array();
+    $username="dog";
+    $password="cat";
+    $name=$_POST["userid"];
+    $pass=$_POST["pass"];
+    if((strcmp($username, $name) == 0)&&(strcmp($password, $pass) == 0)){
+        $_SESSION['name']=$name;
+        $_SESSION['access_level']="standard";
+        session_start();
+    }
+    echo $_SESSION['name']."  type: ".$_SESSION['access_level'];
+    /*
     function displayAccessLevelInformation($access_level) {
         if ($access_level == "standarduser") {
             echo "<p>You are currently logged in as a standard user</p>";
@@ -13,8 +25,7 @@
             echo "<p>You now have access to additional administrative features</p>";
         }
     }
-    $username="dog";
-    $password="cat";
+
     $name=$_POST["userid"];
     $pass=$_POST["pass"];
     if((strcmp($username, $name) == 0)&&(strcmp($password, $pass) == 0)){
@@ -22,7 +33,7 @@
         setcookie('access_level','standarduser');
     }
     echo $name."<br>";
-    displayAccessLevelInformation($_COOKIE['access_level']);
+    displayAccessLevelInformation($_COOKIE['access_level']);*/
     ?>
 </p>
 
