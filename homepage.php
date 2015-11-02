@@ -10,9 +10,8 @@
     $password="cat";
     $name=$_POST["userid"];
     $pass=$_POST["pass"];
-    if (isset($_SESSION['name'])) {
-        /// your code here
-    }elseif((strcmp($username, $name) == 0)&&(strcmp($password, $pass) == 0)){
+
+    if($name!=""&&(strcmp($username, $name) == 0)&&(strcmp($password, $pass) == 0)){
         $_SESSION['name']=$name;
         $_SESSION['access_level']="standard";
 
