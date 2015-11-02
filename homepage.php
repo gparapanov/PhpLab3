@@ -15,7 +15,7 @@
         $_SESSION['access_level']="standard";
 
     }else{
-        session_destroy();
+        //session_destroy();
     }
     echo $_SESSION['name']."  type: ".$_SESSION['access_level'];
 
