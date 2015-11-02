@@ -5,7 +5,7 @@
 <p>
     <?php
     session_start();
-    $_SESSION=array();
+
     $username="dog";
     $password="cat";
     $name=$_POST["userid"];
