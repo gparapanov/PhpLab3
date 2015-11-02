@@ -15,7 +15,7 @@
     }
     $username="dog";
     $password="cat";
-    $name=$_POST["name"];
+    $name=$_POST["userid"];
     $pass=$_POST["pass"];
     if((strcmp($username, $name) == 0)&&(strcmp($password, $pass) == 0)){
         setcookie('details',$name);
