@@ -4,6 +4,7 @@
 <body>
 <p>
     <?php
+    session_start();
     $_SESSION=array();
     $username="dog";
     $password="cat";
@@ -12,9 +13,10 @@
     if((strcmp($username, $name) == 0)&&(strcmp($password, $pass) == 0)){
         $_SESSION['name']=$name;
         $_SESSION['access_level']="standard";
-        session_start();
+
     }
     echo $_SESSION['name']."  type: ".$_SESSION['access_level'];
+
     /*
     function displayAccessLevelInformation($access_level) {
         if ($access_level == "standarduser") {
